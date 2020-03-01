@@ -8,7 +8,53 @@ E.	Si el importe final con descuento suma más de $120  se debe sumar un 10% de 
  ”Usted pago X de IIBB.”, siendo X el impuesto que se pagó. 
 
  */
-function CalcularPrecio () 
+function CalcularPrecio ()
+//A// 
 {
- 	
+var lamparitasBajoConsumo;
+var precioFinal=35;
+var precioConDescuento;
+var precio2;
+var resultado;
+var marcasLamparas;
+var marcasLamparas2;
+var argentinaLuz;
+var felipeLamparas;
+var osram;
+var jeluz;
+var hazIluminacion;
+marcasLamparas = argentinaLuz, felipeLamparas, osram, jeluz, hazIluminacion;
+marcasLamparas2= felipeLamparas, osram, jeluz, hazIluminacion;
+lamparitasBajoConsumo = parseInt(document.getElementById("Cantidad").value);
+console.log(lamparitasBajoConsumo);
+if(lamparitasBajoConsumo>=6) {
+    precio2 = lamparitasBajoConsumo * precioFinal;
+    precioConDescuento = precio2 * 50 / 100;
+    resultado = precioConDescuento;
+    document.getElementById("precioDescuento").value=resultado;
+    alert(resultado);
+}
+//B//
+ /*else if (argentinaLuz==5 )
+ { precio3=lamparitasBajoConsumo*precioFinal;
+   precioConDescuento= precio3 * 40 / 100;
+   resultado = precioConDescuento; 
+   document.getElementById("precioDescuento").value=resultado;
+   alert(resultado);
+
+ }
+else if (lamparitasBajoConsumo ==5 || lamparitasBajoConsumo == marcasLamparas2)
+ { precio3=lamparitasBajoConsumo*precioFinal;
+   precioConDescuento=precio3 * 30 / 100;
+   resultado= precioConDescuento;
+   document.getElementById("precioDescuento").value=resultado;
+   alert(resultado);
+ 
+}*/
+else if(lamparitasBajoConsumo == argentinaLuz || lamparitasBajoConsumo == 5){
+    precio2 = lamparitasBajoConsumo * precioFinal;
+    precioConDescuento = precio2 * 40 / 100;
+    resultado = precioConDescuento;
+    document.getElementById("precioDescuento").value=resultado;
+}
 }
